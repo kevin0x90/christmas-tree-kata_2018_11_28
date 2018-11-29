@@ -25,7 +25,7 @@ public class ChristmasTreeTest {
         String tree = christmasTree.draw(1);
 
         assertThat(tree).isEqualTo(
-                "*\n" +
+                "*" + System.lineSeparator() +
                 "I");
     }
 
@@ -33,29 +33,29 @@ public class ChristmasTreeTest {
     void treeWithHeightTwo() {
         String tree = christmasTree.draw(2);
         assertThat(tree).isEqualTo(
-                        " *\n" +
-                        "***\n" +
+                        " *" + System.lineSeparator() +
+                        "***" + System.lineSeparator() +
                         " I");
     }
 
     @Test
-    void treeeWithHeightThree() {
+    void treeWithHeightThree() {
         String tree = christmasTree.draw(3);
         assertThat(tree).isEqualTo(
-                        "  *\n" +
-                        " ***\n" +
-                        "*****\n" +
+                        "  *" + System.lineSeparator() +
+                        " ***" + System.lineSeparator() +
+                        "*****" + System.lineSeparator() +
                         "  I");
     }
 
     @Test
-    void treeeWithHeightFour() {
+    void treeWithHeightFour() {
         String tree = christmasTree.draw(4);
         assertThat(tree).isEqualTo(
-                        "   *\n" +
-                        "  ***\n" +
-                        " *****\n" +
-                        "*******\n" +
+                        "   *" + System.lineSeparator() +
+                        "  ***" + System.lineSeparator() +
+                        " *****" + System.lineSeparator() +
+                        "*******" + System.lineSeparator() +
                         "   I");
     }
 
@@ -63,18 +63,18 @@ public class ChristmasTreeTest {
     void treeWithHeightFourAndAngel() {
         String tree = christmasTree.drawWithAngel(4);
         assertThat(tree).isEqualTo(
-                        "   X\n" +
-                        "   *\n" +
-                        "  ***\n" +
-                        " *****\n" +
-                        "*******\n" +
+                        "   X" + System.lineSeparator() +
+                        "   *" + System.lineSeparator() +
+                        "  ***" + System.lineSeparator() +
+                        " *****" + System.lineSeparator() +
+                        "*******" + System.lineSeparator() +
                         "   I");
     }
     @Test
     void treeWithHeightZeroAndAngel() {
         String tree = christmasTree.drawWithAngel(0);
         assertThat(tree).isEqualTo(
-                        "X\n" +
+                        "X" + System.lineSeparator() +
                         "I");
     }
 }
